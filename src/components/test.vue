@@ -1,9 +1,6 @@
 <template>
 <div>
-    <input type="text" v-model="user.firstName">
-    <button type="button" v-on:click="saludar(user.firstName)">
-        CLICK ME
-    </button>
+    <input type="text" v-on:keyup.enter="typing">
 </div>
 </template>
 
@@ -27,6 +24,9 @@ export default {
     methods: {
         saludar(name ){
             alert("hello "+name)
+        },
+        typing(e){
+            console.log("dio un enter");
         }
     }
 }
