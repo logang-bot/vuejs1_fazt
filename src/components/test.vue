@@ -1,6 +1,6 @@
 <template>
-<div>
-    <input type="text" v-on:keyup.enter="typing">
+<div class="test">
+    {{msg}}
 </div>
 </template>
 
@@ -28,10 +28,22 @@ export default {
         typing(e){
             console.log("dio un enter");
         }
+    },
+    computed: {
+        fullName(){
+            return this.user.firstName + ' ' + this.user.lastName
+        }
+    },
+    props: {
+        msg: {
+            type: String
+        }
     }
 }
 </script>
 
 <style scoped>
-
+    .test{
+        background-color: #eee;
+    }
 </style>

@@ -1,18 +1,22 @@
 <template>
   <div id="app"> 
     <h1>hola mundo</h1>
-    <test/>
+    <test msg="hola!!!!!!"/>
+    <user/>
   </div>
 </template>
 
 <script>
 
 import test from './components/test.vue'
+import User from './components/user.vue'
+import user from './components/user.vue'
 
 export default {
   name: 'App',
   components: {
-    test
+    test,
+    User
   }
 }
 </script>
